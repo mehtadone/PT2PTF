@@ -1,4 +1,4 @@
-# Profit Trailer to PT Feeder appsettings.json files
+# ProfitTrailer to PT Feeder appsettings.json files
 
 [![Build Status](https://travis-ci.org/mehtadone/PT2PTF.svg?branch=master)](https://travis-ci.org/mehtadone/PT2PTF)
 
