@@ -8,7 +8,7 @@ Have you found some ProfitTrailer settings online shared by a kind soul? But you
 
 Now with ProfitTrailer version 2, and its endless possiblities, this conversion becomes a lot more difficult, and PT Feeder can be complex it its own right. This is project for you. 
 
-This is a free java utility that will take the three .properties files below from [ProfitTrailer Version 2](https://github.com/taniman/profit-trailer), and convert them into a [PT Feeder version 1.5 and above](https://github.com/mehtadone/PTFeeder) appsettings.json file. 
+This is a free open source java utility that will take the three .properties files below from [ProfitTrailer Version 2](https://github.com/taniman/profit-trailer), and convert them into a [PT Feeder version 1.5 & above](https://github.com/mehtadone/PTFeeder) appsettings.json file. 
 
 - pairs.properties
 - indicators.properties
@@ -16,7 +16,9 @@ This is a free java utility that will take the three .properties files below fro
 
 If you do not have these files, you can create new ones and copy and paste them from the ProfitTrailer webpage into them. 
 
-This will create a like for like PT Feeder appsettings file with no extra coin or market actions. **This can be used as a base to build your PT Feeder strategy from.** 
+This will create a like for like PT Feeder appsettings file with no extra coin or market actions. 
+
+**This then can be used as a base to build your PT Feeder strategy from.** 
 
 ## Instructions. 
 
