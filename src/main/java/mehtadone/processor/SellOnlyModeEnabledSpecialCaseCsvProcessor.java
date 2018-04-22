@@ -1,7 +1,7 @@
 package mehtadone.processor;
 
 import mehtadone.PropertyKeyTransformer;
-import mehtadone.output.AppSettings;
+import mehtadone.output.ApplicationSettings;
 
 import java.util.HashSet;
 import java.util.List;
@@ -18,14 +18,14 @@ public class SellOnlyModeEnabledSpecialCaseCsvProcessor implements SpecialCaseCs
     }
 
     @Override
-    public void process(final List<String> keys, final Properties pairsProperties, final AppSettings appSettings) {
+    public void process(final List<String> keys, final Properties pairsProperties, final ApplicationSettings applicationSettings) {
         final Set<String> somOnlyCoins = new HashSet<>();
 
         keys.stream().filter(k -> k.toLowerCase().contains("_sell_only_mode_enabled")).collect(Collectors.toList())
                 .forEach(k -> {
                     if (k.toLowerCase().contains("default_")) {
                         // Process DEFAULT_sell_only_mode_enabled
-                        appSettings.getSectionToFill("pairs", k).put(propertyKeyTransformer.transform(k), pairsProperties.getProperty(k));
+                        applicationSettings.getSectionToFill("pairs", k).put(propertyKeyTransformer.transform(k), pairsProperties.getProperty(k));
                     } else {
                         // Add XXX from XXX_sell_only_mode_enabled to the list of excluded coins only if XXX_sell_only_mode_enabled = true
                         if (pairsProperties.getProperty(k).equalsIgnoreCase("true")) {
@@ -36,7 +36,7 @@ public class SellOnlyModeEnabledSpecialCaseCsvProcessor implements SpecialCaseCs
 
         // Add excludedCoins
         if (!somOnlyCoins.isEmpty()) {
-            appSettings.getSectionToFill("special-cases", "").put("SomOnlyCoins", String.join(",", somOnlyCoins));
+            applicationSettings.getSectionToFill("special-cases", "").put("SomOnlyCoins", String.join(",", somOnlyCoins));
         }
     }
 

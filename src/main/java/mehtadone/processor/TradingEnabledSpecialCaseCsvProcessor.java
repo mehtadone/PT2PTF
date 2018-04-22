@@ -1,7 +1,7 @@
 package mehtadone.processor;
 
 import mehtadone.PropertyKeyTransformer;
-import mehtadone.output.AppSettings;
+import mehtadone.output.ApplicationSettings;
 
 import java.util.HashSet;
 import java.util.List;
@@ -18,14 +18,14 @@ public class TradingEnabledSpecialCaseCsvProcessor implements SpecialCaseCsvProc
     }
 
     @Override
-    public void process(final List<String> keys, final Properties pairsProperties, final AppSettings appSettings) {
+    public void process(final List<String> keys, final Properties pairsProperties, final ApplicationSettings applicationSettings) {
         final Set<String> excludedCoins = new HashSet<>();
 
         keys.stream().filter(k -> k.toLowerCase().contains("_trading_enabled")).collect(Collectors.toList())
                 .forEach(k -> {
                     if (k.toLowerCase().contains("default_")) {
                         // Process DEFAULT_trading_enabled
-                        appSettings.getSectionToFill("pairs", k).put(propertyKeyTransformer.transform(k), pairsProperties.getProperty(k));
+                        applicationSettings.getSectionToFill("pairs", k).put(propertyKeyTransformer.transform(k), pairsProperties.getProperty(k));
                     } else {
                         // Add XXX from XXX_trading_enabled to the list of excluded coins only if XXX_trading_enabled = false
                         if (pairsProperties.getProperty(k).equalsIgnoreCase("false")) {
@@ -36,7 +36,7 @@ public class TradingEnabledSpecialCaseCsvProcessor implements SpecialCaseCsvProc
 
         // Add excludedCoins
         if (!excludedCoins.isEmpty()) {
-            appSettings.getSectionToFill("special-cases", "").put("ExcludedCoins", String.join(",", excludedCoins));
+            applicationSettings.getSectionToFill("special-cases", "").put("ExcludedCoins", String.join(",", excludedCoins));
         }
     }
 

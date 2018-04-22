@@ -1,17 +1,45 @@
 package mehtadone.output;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-import java.util.HashMap;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
-public class AppSettings {
+@JsonPropertyOrder({"PtFeeder", "Common", "Defaults", "MarketConditionsGrouping"})
+public class ApplicationSettings {
 
-    private final Map<String, String> PtFeeder = new HashMap<>();
-    private final Map<String, String> Common = new HashMap<>();
-    private final Map<String, String> Defaults = new HashMap<>();
-    private final Map<String, List<MarketConditionsGroupingConfig>> MarketConditionsGrouping = new HashMap<>();
+    /**
+     * Comparator in order to sort correctly strings with integers. For example "s1", "s2", ..., "s9", "s10", "s11", ..., "s19", "s20", "s21", ...
+     * Original string comparator sorts such sequence next way: "s1", "s10", "s11", ..., "s19", "s2", "s20", "s21" ..., "s9",
+     */
+    private static final Comparator<String> STRING_WITH_INDICES_COMPARATOR = new Comparator<String>() {
+
+        @Override
+        public int compare(final String s1, final String s2) {
+            final String s1StringPart = s1.replaceAll("\\d", "");
+            final String s2StringPart = s2.replaceAll("\\d", "");
+
+            if (s1StringPart.equalsIgnoreCase(s2StringPart)) {
+                return getInt(s1) - getInt(s2);
+            }
+
+            return s1.compareTo(s2);
+        }
+
+        private int getInt(final String s) {
+            final String num = s.replaceAll("\\D", "");
+            // Return 0 if there is not in in the string
+            return num.isEmpty() ? 0 : Integer.parseInt(num);
+        }
+    };
+
+    private final Map<String, String> PtFeeder = new TreeMap<>(STRING_WITH_INDICES_COMPARATOR);
+    private final Map<String, String> Common = new TreeMap<>(STRING_WITH_INDICES_COMPARATOR);
+    private final Map<String, String> Defaults = new TreeMap<>(STRING_WITH_INDICES_COMPARATOR);
+    private final Map<String, List<MarketConditionsGroupingConfig>> MarketConditionsGrouping = new TreeMap<>(STRING_WITH_INDICES_COMPARATOR);
 
     @JsonProperty("PtFeeder")
     public Map<String, String> getPtFeeder() {
