@@ -16,7 +16,7 @@ This is a free java utility that will take the three .properties files below fro
 
 If you do not have these files, you can create new ones and copy and paste them from the ProfitTrailer webpage into them. 
 
-This will create a like for like PT Feeder appsettings file with no extra coin or market actions. This can be used as a base to build your PT Feeder strategy from. 
+This will create a like for like PT Feeder appsettings file with no extra coin or market actions. **This can be used as a base to build your PT Feeder strategy from.** 
 
 ## Instructions. 
 
