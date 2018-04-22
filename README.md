@@ -18,8 +18,8 @@ This will create a like for like PT Feeder appsettings file with no extra coin o
 
 ## Instructions. 
 
-- Download the jar file from the [releases](https://github.com/mehtadone/PT2PTF/releases) page. 
-- Place the jar in a new folder. 
+- Download the zip file from the [releases](https://github.com/mehtadone/PT2PTF/releases) page. 
+- Extract zip to new folder. 
 - Copy the three properties files into the new folder. 
 - Navigate to the folder using a command window (dos prompt, terminal, bash).
 - type `java -jar pt2ptf.jar`.
