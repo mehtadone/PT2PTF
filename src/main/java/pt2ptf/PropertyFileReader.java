@@ -1,4 +1,4 @@
-package mehtadone;
+package pt2ptf;
 
 import java.io.File;
 import java.io.FileInputStream;

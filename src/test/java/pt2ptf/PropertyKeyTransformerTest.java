@@ -1,4 +1,4 @@
-package mehtadone;
+package pt2ptf;
 
 import org.assertj.core.api.Assertions;
 import org.junit.Test;

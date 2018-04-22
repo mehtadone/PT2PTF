@@ -1,4 +1,4 @@
-package mehtadone.output;
+package pt2ptf.output;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

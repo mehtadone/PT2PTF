@@ -1,4 +1,4 @@
-package mehtadone;
+package pt2ptf;
 
 import org.apache.commons.text.WordUtils;
 

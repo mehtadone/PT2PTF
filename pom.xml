@@ -80,7 +80,7 @@
                         <configuration>
                             <archive>
                                 <manifest>
-                                    <mainClass>mehtadone.Main</mainClass>
+                                    <mainClass>pt2ptf.Main</mainClass>
                                 </manifest>
                             </archive>
                             <descriptorRefs>

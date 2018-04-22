@@ -1,9 +1,9 @@
-package mehtadone;
+package pt2ptf;
 
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import mehtadone.output.ApplicationSettings;
-import mehtadone.processor.*;
+import pt2ptf.output.ApplicationSettings;
+import pt2ptf.processor.*;
 
 import java.util.Map;
 import java.util.Set;

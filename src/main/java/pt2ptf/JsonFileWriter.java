@@ -1,4 +1,4 @@
-package mehtadone;
+package pt2ptf;
 
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;

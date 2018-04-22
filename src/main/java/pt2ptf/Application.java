@@ -1,11 +1,11 @@
-package mehtadone;
+package pt2ptf;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import mehtadone.output.ApplicationSettings;
-import mehtadone.processor.SkipSpecialCaseProcessor;
-import mehtadone.processor.SpecialCaseCsvProcessor;
-import mehtadone.processor.SpecialCaseProcessor;
+import pt2ptf.output.ApplicationSettings;
+import pt2ptf.processor.SkipSpecialCaseProcessor;
+import pt2ptf.processor.SpecialCaseCsvProcessor;
+import pt2ptf.processor.SpecialCaseProcessor;
 
 import java.util.List;
 import java.util.Map;

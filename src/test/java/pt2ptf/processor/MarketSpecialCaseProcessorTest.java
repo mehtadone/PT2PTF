@@ -1,6 +1,6 @@
-package mehtadone.processor;
+package pt2ptf.processor;
 
-import mehtadone.output.ApplicationSettings;
+import pt2ptf.output.ApplicationSettings;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,6 +1,6 @@
-package mehtadone.processor;
+package pt2ptf.processor;
 
-import mehtadone.output.ApplicationSettings;
+import pt2ptf.output.ApplicationSettings;
 
 import java.util.List;
 import java.util.Properties;
