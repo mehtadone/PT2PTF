@@ -1,5 +1,7 @@
 # Profit Trailer to PT Feeder appsettings.json files
 
+[![Build Status](https://travis-ci.org/mehtadone/PT2PTF.svg?branch=master)](https://travis-ci.org/mehtadone/PT2PTF)
+
 ## About
 
 Have you found some ProfitTrailer settings online shared by a kind soul? But you use [PT Feeder](https://wiki.ptfeeder.co/) and want to add some extra intelligence onto your settings and have them change according to market and coin trend. 
