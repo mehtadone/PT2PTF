@@ -96,7 +96,7 @@ public class Application {
         applicationSettings.getMarketConditionsGrouping().put("Configs", ImmutableList.of(
                 new ApplicationSettings.MarketConditionsGroupingConfig("Bear", "-2"),
                 new ApplicationSettings.MarketConditionsGroupingConfig("Boring", "2"),
-                new ApplicationSettings.MarketConditionsGroupingConfig("Bear", "3")));
+                new ApplicationSettings.MarketConditionsGroupingConfig("Bull", "100000")));
 
         return applicationSettings;
     }
