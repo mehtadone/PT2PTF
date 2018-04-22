@@ -2,7 +2,11 @@
 
 ## About
 
-This is a free java utility class that will take the three .properties files below from [ProfitTrailer Version 2](https://github.com/taniman/profit-trailer), and convert them into a [PT Feeder version 1.5 and above](https://github.com/mehtadone/PTFeeder) appsettings.json file. 
+Have you found some ProfitTrailer settings online shared by a kind soul? But you use [PT Feeder](https://wiki.ptfeeder.co/) and want to add some extra intelligence onto your settings and have them change according to market and coin trend. 
+
+Now with ProfitTrailer version 2, and its endless possiblities, this conversion becomes a lot more difficult, and PT Feeder can be complex it its own right. This is project for you. 
+
+This is a free java utility that will take the three .properties files below from [ProfitTrailer Version 2](https://github.com/taniman/profit-trailer), and convert them into a [PT Feeder version 1.5 and above](https://github.com/mehtadone/PTFeeder) appsettings.json file. 
 
 - pairs.properties
 - indicators.properties
