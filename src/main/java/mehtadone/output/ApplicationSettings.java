@@ -2,6 +2,7 @@ package mehtadone.output;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.EqualsAndHashCode;
 
 import java.util.Comparator;
 import java.util.List;
@@ -87,6 +88,7 @@ public class ApplicationSettings {
         return getPtFeeder();
     }
 
+    @EqualsAndHashCode
     public static class MarketConditionsGroupingConfig {
 
         private final String Name;

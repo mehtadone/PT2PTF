@@ -1,20 +1,16 @@
 package mehtadone;
 
 import org.assertj.core.api.Assertions;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.junit.runners.JUnit4;
+import org.mockito.InjectMocks;
+import org.mockito.runners.MockitoJUnitRunner;
 
-@RunWith(JUnit4.class)
+@RunWith(MockitoJUnitRunner.class)
 public class PropertyKeyTransformerTest {
 
+    @InjectMocks
     private PropertyKeyTransformer propertyKeyTransformer;
-
-    @Before
-    public void before() {
-        propertyKeyTransformer = new PropertyKeyTransformer();
-    }
 
     @Test
     public void transform_keyWithPrefix() {

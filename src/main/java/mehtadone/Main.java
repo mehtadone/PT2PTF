@@ -34,6 +34,7 @@ public class Main {
             "market", new MarketSpecialCaseProcessor(),
             "hidden_pairs", new HiddenPairsSpecialCaseProcessor()
     );
+
     private static final Map<String, SpecialCaseCsvProcessor> SPECIAL_CASE_CSV_PROCESSORS = ImmutableMap.of(
             "_trading_enabled", new TradingEnabledSpecialCaseCsvProcessor(PROPERTY_KEY_TRANSFORMER),
             "_sell_only_mode_enabled", new SellOnlyModeEnabledSpecialCaseCsvProcessor(PROPERTY_KEY_TRANSFORMER),
