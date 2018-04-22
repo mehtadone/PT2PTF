@@ -12,6 +12,7 @@
 
 # Package Files #
 *.jar
+!pt2ptf.jar
 *.war
 *.ear
 *.zip
