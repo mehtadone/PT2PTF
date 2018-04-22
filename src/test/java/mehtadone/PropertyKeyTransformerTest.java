@@ -17,8 +17,14 @@ public class PropertyKeyTransformerTest {
     }
 
     @Test
-    public void transform_withPrefix() {
+    public void transform_keyWithPrefix() {
         Assertions.assertThat(propertyKeyTransformer.transform("INDICATORS", "EMA_cross_candles"))
+                .isEqualTo("IndicatorsEmaCrossCandles");
+    }
+
+    @Test
+    public void transform_defaultKeyWithPrefix() {
+        Assertions.assertThat(propertyKeyTransformer.transform("INDICATORS", "default_EMA_cross_candles"))
                 .isEqualTo("IndicatorsEmaCrossCandles");
     }
 
