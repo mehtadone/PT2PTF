@@ -284,7 +284,7 @@ public class ApplicationTest {
         Assertions.assertThat(applicationSettings.getMarketConditionsGrouping().get("Configs"))
                 .contains(new ApplicationSettings.MarketConditionsGroupingConfig("Bear", "-2"),
                         new ApplicationSettings.MarketConditionsGroupingConfig("Boring", "2"),
-                        new ApplicationSettings.MarketConditionsGroupingConfig("Bear", "100000"));
+                        new ApplicationSettings.MarketConditionsGroupingConfig("Bull", "100000"));
     }
 
 }
