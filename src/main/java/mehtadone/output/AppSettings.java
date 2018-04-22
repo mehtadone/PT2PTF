@@ -41,17 +41,22 @@ public class AppSettings {
      * @return section to fill
      */
     public Map<String, String> getSectionToFill(final String propertiesFile, final String key) {
-        // All 'indicators' go into common section
+        // All 'indicators' go into Common section
         if ("indicators".equalsIgnoreCase(propertiesFile)) {
             return getCommon();
         }
 
         // For 'dca' and 'pairs' we will look into the prefix
-        if (key.toLowerCase().startsWith("default_")) {
-            return getDefaults();
-        } else {
-            return getCommon();
+        if ("dca".equalsIgnoreCase(propertiesFile) || "pairs".equalsIgnoreCase(propertiesFile)) {
+            if (key.toLowerCase().startsWith("default_")) {
+                return getDefaults();
+            } else {
+                return getCommon();
+            }
         }
+
+        // By default, return PtFeeder section to fill
+        return getPtFeeder();
     }
 
     public static class MarketConditionsGroupingConfig {
