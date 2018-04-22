@@ -1,0 +1,8 @@
+deploy:
+  provider: releases
+  api_key: "rMxVtVrce2Oh6Jf2V6c2FDAyJR4/L0ZFpxGl0ntx0g3cHwcqQvWvD4AW0VfIwFBs"
+  file: "pt2ptf.jar"
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: https://github.com/mehtadone/PT2PTF
