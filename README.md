@@ -32,3 +32,8 @@ This will create a like for like PT Feeder appsettings file with no extra coin o
 - Edit this file and change any properties you would like and add any extra configuration you like. See [here](https://wiki.ptfeeder.co/configuration.html#section-groupings) for all the possiblities. 
 
 As a editor for the json file, [Visual Studio Code](https://code.visualstudio.com) is highly reccomended. 
+
+## Todo
+
+- Ignore case of original properties files. At the moment, only PAIRS.properties, DCA.properties and INDICATORS.properties work
+- Support for any pair specific overrides in properties files. 
