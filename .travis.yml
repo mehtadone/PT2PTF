@@ -6,3 +6,4 @@ deploy:
   file: pt2ptf.jar
   on:
     repo: mehtadone/PT2PTF
+    branch: master
