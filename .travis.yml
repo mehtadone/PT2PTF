@@ -6,5 +6,5 @@ deploy:
   file: "pt2ptf.jar"
   skip_cleanup: true
   on:
-    tags: true
-    repo: https://github.com/mehtadone/PT2PTF
+    tags: false
+    repo: mehtadone/PT2PTF
