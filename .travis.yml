@@ -1,10 +1,8 @@
 language: java
-
 deploy:
   provider: releases
-  api_key: "rMxVtVrce2Oh6Jf2V6c2FDAyJR4/L0ZFpxGl0ntx0g3cHwcqQvWvD4AW0VfIwFBs"
-  file: "pt2ptf.jar"
-  skip_cleanup: true
+  api_key:
+    secure: XYug1Ar4Zwk6aq2Dg3uaqwaetJSM09KvlcEYHnAoRlRZVqZ5vZx/SR1CghkOCGe2Yg9OSkPlDQ5ubnjhdqvNwD6wDIHHqaH1eobDb3ttGBBBkPlq9YTTpv/iB4P8EcIaOg7ohSf2iSyzQVMUAVFSoG1z+p7G2cwwYu/9Z7sNJk7TFna+XeNEIoph4dh14baysF3JM3kdZW/90glOglXdKBtmhb/sQY6OyrP0hxvabAFgGdKkjp9JyZAyuRSrft94CLCTk6uFAkFRmpTyZPLcluFPL5fsABm/TAmAWL6GoLispi6h6VtKoeA6iJKNT6O8F9SkAMD7w2bYZwUuAgTDajj34LgaCWMDyiUgcVmnDyYWB6LpidXeQcto3n7sP8RY6cSnDusERPwbhdJOkvP7dCps0OLuI7Le0YxxnxCXXZDC2JfCiuinhESYpiqwK0nWvCDEZ3dvcZWmv/v/BR26/HIaMvyqO+KcXinB/O68i5aYrkbT8+Bg4AaKV3D6v4K8WF3Ti7AFraMFiDJ5il5rpfI7mb1jGAkcnYdXnmqjWYsDMvajP+i1mrI1uQfz8ZXYOTQegxtlNUj7P5LYF3XuvdtOy7u6HheHlKsWSd+I4xBCxkHMt7UjWlH5L0rY+yxienKvvBkFNCqGta3GMfzwlx3+qQDss5g9NfoCIqX+4w0=
+  file: pt2ptf.jar
   on:
-    tags: false
     repo: mehtadone/PT2PTF
